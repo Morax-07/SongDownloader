@@ -13,7 +13,7 @@ while IFS= read -r linea || [[ -n "$linea" ]]; do
 
 
     if [[ -n "$index" ]]; then
-	yt-dlp --playlist-items "$index" --cookies-from-browser chrome -x --audio-format mp3 "$link" -o "download/$titolo.mp3"	
+	    yt-dlp --playlist-items "$index" --cookies-from-browser chrome -x --audio-format mp3 "$link" -o "download/$titolo.mp3"	
     else
         yt-dlp --playlist-items 1 --cookies-from-browser chrome -x --audio-format mp3 "$link" -o "download/$titolo.mp3"
     fi
